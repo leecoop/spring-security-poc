@@ -35,7 +35,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //
 //
 //    }
-
+//
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
@@ -47,6 +47,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .formLogin().permitAll();
 
     }
+
+//        @Override
+//    public void configure(HttpSecurity http) throws Exception {
+//        http
+//                .csrf()
+//                .disable()
+//                .authorizeRequests()
+//                .antMatchers("/**").hasAnyRole("ADMIN")
+//                .and()
+//                .formLogin().permitAll();
+//
+//    }
 
 
 

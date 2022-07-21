@@ -16,8 +16,7 @@ public class WebController {
         return "Welcome home!";
     }
 
-    //    @PreAuthorize("hasAnyRole(USER)")
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping("/restricted")
     public String restricted() {
         return "You found the secret lair!";
